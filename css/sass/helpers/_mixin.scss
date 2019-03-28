@@ -1,0 +1,42 @@
+// START MIXIN OVERLAY
+
+@mixin overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+// END MIXIN OVERLAY
+
+
+// START MIXIN PREFIXESR
+
+@mixin prefixer($property, $value ,$prefixes:()){
+    @each $prefix in $prefixes{
+        #{'-' + $prefix + '-' + $property }:$value;
+    }
+    #{$property}:$value ;
+    
+}
+
+
+// END MIXIN OVERLAY
+
+
+// START MIXIN ANIMATION
+@mixin keyFarm($animation-name){
+        @-o-keyframes #{$animation-name}{
+        @content;
+    }
+    @-webkit-keyframes #{$animation-name}{
+        @content;
+    }
+     @-moz-keyframes #{$animation-name}{
+        @content;
+    }
+     @keyframes #{$animation-name}{
+        @content;
+    }
+}
+// END MIXIN ANIMATION

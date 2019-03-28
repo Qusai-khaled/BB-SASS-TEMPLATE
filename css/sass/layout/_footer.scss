@@ -1,0 +1,157 @@
+.footer {
+    background-color: #e2e2e2;
+    overflow: hidden;
+    padding-top: 30px;
+    margin-top: 50px;
+
+    .gallery,
+    .info,
+    .contact {
+        float: $float-left;
+    }
+
+    .gallery {
+
+        @media #{$minSmall} {
+            width: 100%;
+        }
+
+        @media #{$minMedium} {
+            width: 50%;
+        }
+
+        .img-box {
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            img {
+                @media #{$minSmall} {
+                    float: $float-left;
+                }
+
+                width: 150px;
+                height:150px;
+                margin-bottom: 15px;
+                border: 6px solid #968c8c;
+            }
+
+            .text {
+                @media #{$minSmall} {
+                    float: $float-left;
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    width: calc(100% - 180px);
+                }
+
+
+
+                h4 {
+                    color: $redColor;
+                }
+
+                p {
+                    color: #888;
+                    line-height: 1.4;
+
+                }
+            }
+        }
+    }
+
+    .info {
+        @media #{$maxMobile}{
+            float: none;
+        }
+        @media #{$minSmall} {
+            width: 50%;
+        }
+
+        @media #{$minMedium} {
+            width: 25%;
+        }
+
+        ul {
+            color: #888;
+            line-height: 2;
+
+            li {
+                span {
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: $redColor;
+                }
+            }
+        }
+
+        h4 {
+            color: #888;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        p {
+            color: #888;
+            margin-top: 8px;
+        }
+
+    }
+
+    .contact {
+        @media #{$maxMobile}{
+            float: none;
+        }
+        @media #{$minSmall} {
+            width: 50%;
+        }
+
+        @media #{$minMedium} {
+            width: 25%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            outline: none;
+            border: 1px solid #c9c9c9;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        textarea {
+            height: 120px;
+        }
+    }
+
+    .section-title {
+        font-weight: normal;
+        color: #444;
+    }
+
+    .copyright {
+        padding: 25px 0;
+        border-top: 1px solid #c5c5c5;
+        overflow: hidden;
+        margin-top: 25px;
+
+        .text,
+        .qusai {
+            float: $float-left;
+            width: 50%;
+            color: #888;
+            @media #{$maxMobile}{
+                width: 100%;
+                float: none;
+                text-align: center;
+                padding-bottom: 25px;
+        }
+        }
+
+        .qusai {
+            @media #{$minSmall}{
+                text-align: $text-right;}
+        }
+    }
+}
+
